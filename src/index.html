@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>abz</title>
+    <style>
+      #paginator div {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        margin: 0 5px;
+        justify-content: center;
+        align-items: center;
+        border: solid black 1px;
+        cursor: pointer;
+      }
+      #paginator {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      .page-active {
+        background: silver;
+      }
+      #todo {
+        width: 50%;
+        margin: 10px auto;
+      }
+      #todo div {
+        width: 100%;
+        position: relative;
+        display: flex;
+        border: solid 1px silver;
+        margin: 10px;
+      }
+      #todo span {
+        margin: 10px;
+        width: 30%;
+        overflow: hidden;
+        white-space: nowrap; /* Отменяем перенос текста */
+        overflow: hidden; 
+      }
+
+      #todo span:nth-child(2) {
+        width: 40px;
+      }
+   
+      #todo div span:first-child {
+        cursor: pointer;
+        width: 20px;
+      }
+      #todo div span:last-child {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        margin-left: 100px;
+        width: auto;
+
+      }
+      #add {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+  flex-wrap: wrap;
+      }
+
+      #add input {
+        width: 15%;
+        margin-right: 10px;
+      }
+      #add div {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      table {
+border-spacing: 0 10px;
+font-family: 'Open Sans', sans-serif;
+font-weight: bold;
+}
+
+
+td:last-child {
+cursor: pointer;
+}
+
+td {
+vertical-align: middle;
+padding: 10px;
+font-size: 14px;
+text-align: center;
+
+}
+td:first-child {
+
+cursor: pointer;
+
+}
+td:nth-child(3) {
+  width: auto;
+
+}
+td:nth-child(5) {
+  width: auto;
+  border-right: none;
+}
+td:nth-child(2) {
+  width: auto;
+  border-right: none;
+}
+
+
+.d-flex td {
+  display: none;
+
+}
+.inputView {
+  background: #ffff;
+  border: none;
+}
+    </style>
+  </head>
+<body>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</nav>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous">
+          
+</script>
+<script src="main.js"></script>
+</body>
+</html>

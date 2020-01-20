@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>abz</title>
+<style>
+
+#paginator {
+  display: flex;
+  justify-content: center;
+}
+.page-active {
+  background: silver;
+}
+
+.bottom-paginator {
+  display: flex;
+  justify-content: center;
+}
+
+.todo {
+  margin: 0 auto;
+  border-spacing: 0 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+
+.todo td:last-child {
+  background-image: url('./img/remove.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: inline-block;
+  width: 50px;
+  height: 53px;
+  cursor: pointer;
+}
+
+.todo td {
+  vertical-align: middle;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+
+}
+.todo tr>td:first-child {
+  background-image: url('./img/edit.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: inline-block;
+  width: 50px;
+  height: 53px;
+  cursor: pointer;
+
+}
+.todo td:nth-child(3) {
+  width: auto;
+
+}
+.todo td:nth-child(5) {
+  width: auto;
+  border-right: none;
+}
+.todo td:nth-child(2) {
+  width: auto;
+  border-right: none;
+}
+
+.d-flex td {
+  display: none;
+}
+.inputView {
+  background: #ffff;
+  border: none;
+}
+
+#todo-add {
+  width: 80%;
+  margin: 0 auto;
+}
+.input {
+  display: flex;
+}
+
+.button {
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.alert {
+  display: none;
+  text-align: center;
+}
+
+.save-button {
+  position: absolute;
+  left: -60px;
+}
+
+.close-button {
+  position: absolute;
+  right: 0;
+}
+
+.position {
+  position: relative;
+  opacity: 0;
+  background-image: none!important;
+}
+
+</style>
+</head>
+<body>
+<div id="todo-add">
+  <div class="input">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">First  name</span>
+      </div>
+      <input type="text" class="form-control" name="first_name">
+      </div>
+      <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Last name</span>
+      </div>
+      <input type="text" class="form-control" name="last_name">
+      </div>
+      <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">msg</span>
+      </div>
+      <input type="text" class="form-control" name="msg">
+    </div>
+  </div>
+  <div class="button">
+    <button class="btn btn-primary" data-event="add">
+       <span class="spinner-grow spinner-grow-sm"></span>
+      Sumbit
+    </button>
+  </div>
+  <div class="alert alert-primary alert-active" role="alert">
+  This is a primary alert—check it out!
+  </div>
+</div>
+
+</div>
+<table id="todo" class="todo">
+
+</table>
+<nav aria-label="..." class="bottom-paginator">
+
+  <ul class="pagination" id="paginator">
+
+  </ul>
+</nav>
+
+<div id="paginator"></div>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
